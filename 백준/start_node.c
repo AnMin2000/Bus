@@ -8,6 +8,5 @@ void addFirst(NODE* head, element data)    // 기준 노드 뒤에 노드를 추가하는 함�
     newNode->data = &data;            // 데이터 저장
 
     head->next = newNode;    // 기준 노드의 다음 노드에 새 노드를 지정
-
 	// ㅁ -> ㅁ -> null
 }
