@@ -35,10 +35,7 @@ typedef struct {
     char pw[20];
 }Manager;
 
-
-
-typedef struct{    // 연결 리스트의 노드 구조체
-    struct NODE* next;    // 다음 노드의 주소를 저장할 포인터
+typedef struct {
     char* grade[1];        // 등급
     int month;
     int day;
@@ -46,7 +43,12 @@ typedef struct{    // 연결 리스트의 노드 구조체
     int start_min;        // 시작 분
     int seat;             // 잔여석
     int money;
-}NODE;
+}Element;
+
+typedef struct{    // 연결 리스트의 노드 구조체
+    struct Node* next;    // 다음 노드의 주소를 저장할 포인터
+    Element data;
+}Node;
 
 Book member[MAX];
 Manager manager[MAX];
@@ -96,7 +98,7 @@ void countTime(int a);
 int Time(); // 현재 시간 불러오기
 int isyoon(int a); // 달력 윤달 구하기
 void manager_time();
-void addFirst(NODE* head, element data); // 첫번째 함수
+void addFirst(Node* head, Element data); // 첫번째 함수
 //기능 함수
 void Member_read();
 void Member_append(Book member);
@@ -122,10 +124,3 @@ int check; // 로그인 했는지 안했는지 체크  1이면 로그인
 int ticket_id_count; // 티켓 몇번째 id인지 관리 변수
 int blank_count; // 시작 달력 공백이 몇인지 계산해서 회색으로 바꿔주기 위한 코드
 // 첫번째 연결리스트 입력 받기 위한 변수
-char* node_grade[1];
-int node_month;
-int node_day;
-int node_start_hour;
-int node_start_min;
-int node_seat;
-int node_money;

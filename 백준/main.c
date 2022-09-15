@@ -7,5 +7,5 @@ int main()
 	//Member_read();
 //	Manager_read();
 	//MainUi();
-	//manager_time();
+	manager_time();
 }

@@ -38,7 +38,9 @@
     <ClCompile Include="searchUi.c" />
     <ClCompile Include="signupUi.c" />
     <ClCompile Include="startUi.c" />
-    <ClCompile Include="start_node.c" />
+    <ClCompile Include="start_node.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="table.c" />
     <ClCompile Include="memberTxt.c" />
     <ClCompile Include="time.c" />
