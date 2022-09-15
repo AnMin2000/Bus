@@ -2,6 +2,7 @@
 #include"header.h"
 void SignUpUi()
 {
+	//ㅇㄹㄴㅇㄹ
 	square(85, 29, 12, 1); //스퀘어 윗부분이 짤림 (나중 수정예정)
 	square(81, 18, 14, 6);
 	square_char(70, 2, 18, 8, "회원가입");
