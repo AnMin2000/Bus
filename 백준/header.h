@@ -36,12 +36,11 @@ typedef struct {
 }Manager;
 
 typedef struct {
-    char* grade[1];        // 등급
+    char grade[5];        // 등급
     int month;
     int day;
     int start_hour;       // 시작시간
     int start_min;        // 시작 분
-    int seat;             // 잔여석
     int money;
 }Element;
 

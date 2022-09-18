@@ -100,7 +100,7 @@ void LoginUi()
 		}
 		else if (tmp1 == 2)
 		{
-				//시간 조정
+				//매출 확인
 		}
 		ExClick();
 		
