@@ -25,6 +25,7 @@
     <ClCompile Include="count.c" />
     <ClCompile Include="endUi.c" />
     <ClCompile Include="inquiryUi.c" />
+    <ClCompile Include="json_txt.c" />
     <ClCompile Include="loginUi.c" />
     <ClCompile Include="main.c">
       <SDLCheck Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</SDLCheck>
@@ -53,6 +54,9 @@
   <ItemGroup>
     <ClInclude Include="header.h" />
     <ClInclude Include="struct.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="json.json" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

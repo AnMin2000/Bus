@@ -4,6 +4,7 @@ void manager_time()
 {
 	Node* head = malloc(sizeof(Node));
 	head->next = NULL;
+	int count = 0;
 	while (1)
 	{
 		square(85, 29, 12, 1);
@@ -40,7 +41,9 @@ void manager_time()
 		scanf("%d", &head->data.money);
 
 		addFirst(head, head->data);
-		
+		if (count > 0) json_write(head);
+		else  json_append(head);
+		count++;
 	}
 
 	//clearconsole();

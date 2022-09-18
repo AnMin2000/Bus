@@ -7,5 +7,6 @@ int main()
 	//Member_read();
 //	Manager_read();
 	//MainUi();
+	json_read();
 	manager_time();
 }

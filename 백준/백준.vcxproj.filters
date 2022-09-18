@@ -81,6 +81,9 @@
     <ClCompile Include="manager_time.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="json_txt.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Member.txt">
@@ -97,5 +100,10 @@
     <ClInclude Include="struct.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="json.json">
+      <Filter>헤더 파일</Filter>
+    </None>
   </ItemGroup>
 </Project>
