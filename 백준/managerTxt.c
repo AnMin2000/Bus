@@ -11,7 +11,8 @@ void Manager_read()
 	}
 	fclose(fp);
 }
-void Manager_write() {
+void Manager_write() 
+{
 	FILE* fp = fopen("Manager.txt", "w");
 
 	for (int i = 0; i < managerCount; i++) {

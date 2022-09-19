@@ -81,7 +81,7 @@
     <ClCompile Include="manager_time.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="json_txt.c">
+    <ClCompile Include="Bus.json.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -102,8 +102,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="json.json">
-      <Filter>헤더 파일</Filter>
-    </None>
+    <None Include="Bus.json" />
   </ItemGroup>
 </Project>

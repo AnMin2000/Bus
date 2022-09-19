@@ -105,9 +105,10 @@ void Member_write();
 void Manager_read();
 void Manager_append(Manager manager);
 void Manager_write();
-char* json_read();
-void json_append(Node* head);
-void json_write(Node* head);
+char* Bus_read();
+void Bus_append(Node* head);
+void Bus_write(Node* head);
+
 // 텍스트 함수
 int table_count;
 int count; // 멤버 관리 변수

@@ -19,13 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Bus.json.c" />
     <ClCompile Include="calenderUi.c" />
     <ClCompile Include="cancleUi.c" />
     <ClCompile Include="changeUi.c" />
     <ClCompile Include="count.c" />
     <ClCompile Include="endUi.c" />
     <ClCompile Include="inquiryUi.c" />
-    <ClCompile Include="json_txt.c" />
     <ClCompile Include="loginUi.c" />
     <ClCompile Include="main.c">
       <SDLCheck Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</SDLCheck>
@@ -56,7 +56,7 @@
     <ClInclude Include="struct.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="json.json" />
+    <None Include="Bus.json" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

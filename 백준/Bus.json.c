@@ -1,8 +1,8 @@
 #pragma once
 #include"header.h"
-char* json_read()    // 파일을 읽어서 내용을 반환하는 함수
+char* Bus_read()    // 파일을 읽어서 내용을 반환하는 함수
 {
-    FILE* fp = fopen("json.json", "rb");
+    FILE* fp = fopen("Bus.json", "rb");
     if (fp == NULL)
         return NULL;
 
@@ -30,36 +30,35 @@ char* json_read()    // 파일을 읽어서 내용을 반환하는 함수
 
     return buffer;
 }
-void json_append(Node *head)
+void Bus_append(Node* head)
 {
-    FILE* fp = fopen("json.json", "a");
+    FILE* fp = fopen("Bus.json", "ab");
 
     // JSON 문법에 맞춰서 fprintf 함수로 값 출력
     fprintf(fp, "{\n");
     fprintf(fp, "  \"Month\": %d,\n", head->data.month);
     fprintf(fp, "  \"Day\": %d,\n", head->data.day);
-    fprintf(fp, "  \"StartHour\": \"%d\",\n", head->data.start_hour);
-    fprintf(fp, "  \"StartMinute\": \"%d\",\n", head->data.start_min);
+    fprintf(fp, "  \"StartHour\": %d,\n", head->data.start_hour);
+    fprintf(fp, "  \"StartMinute\": %d,\n", head->data.start_min);
     fprintf(fp, "  \"Grade\": \"%s\",\n", head->data.grade);
-    fprintf(fp, "  \"Money\": \"%d\",\n", head->data.money);
+    fprintf(fp, "  \"Money\": %d\n", head->data.money);
     fprintf(fp, "}\n");
 
     fclose(fp);    // 파일 닫기
 }
-void json_write(Node* head)
+void Bus_write(Node* head)
 {
-    FILE* fp = fopen("json.json", "w");
+    FILE* fp = fopen("Bus.json", "wb");
     Node* curr = head->next;
     while (curr != NULL)               // 포인터가 NULL이 아닐 때 계속 반복
     {
-
         fprintf(fp, "{\n");
         fprintf(fp, "  \"Month\": %d,\n", curr->data.month);
         fprintf(fp, "  \"Day\": %d,\n", curr->data.day);
         fprintf(fp, "  \"StartHour\": %d,\n", curr->data.start_hour);
         fprintf(fp, "  \"StartMinute\": %d,\n", curr->data.start_min);
         fprintf(fp, "  \"Grade\": \"%s\",\n", curr->data.grade);
-        fprintf(fp, "  \"Money\": %d,\n", curr->data.money);
+        fprintf(fp, "  \"Money\": %d\n", curr->data.money);
         fprintf(fp, "}\n");
         curr = curr->next;
     }
