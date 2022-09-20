@@ -1,11 +1,32 @@
 #pragma once
 #pragma warning(disable : 4996)
 #define MAX 1000
+#define TOKEN_COUNT 1000    // 토큰의 최대 개수
 #include<stdio.h>
 #include<Windows.h>
 #include<string.h>
 #include<time.h>
+#include<stdbool.h>
 
+typedef enum TOKEN_TYPE {
+    TOKEN_STRING,    // 문자열 토큰
+    TOKEN_NUMBER,    // 숫자 토큰
+} TOKEN_TYPE;
+
+// 토큰 구조체
+typedef struct _TOKEN {
+    TOKEN_TYPE type;    // 토큰 종류
+    union {             // 두 종류 중 한 종류만 저장할 것이므로 공용체로 만듦
+        char* string;       // 문자열 포인터
+        double number;      // 실수형 숫자
+    };
+    bool isArray;       // 현재 토큰이 배열인지 표시
+} TOKEN;
+
+// JSON 구조체
+typedef struct _JSON {
+    TOKEN tokens[TOKEN_COUNT];    // 토큰 배열
+} JSON;
 struct {
 
     int tm_sec;   //초
@@ -108,7 +129,7 @@ void Manager_write();
 char* Bus_read();
 void Bus_append(Node* head);
 void Bus_write(Node* head);
-
+void parseJSON(char* doc, int size, JSON* json);
 // 텍스트 함수
 int table_count;
 int count; // 멤버 관리 변수
