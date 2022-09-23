@@ -1,16 +1,8 @@
 {
-  "Day": 1,
+  "Month": "1",
+  "Day": "1",
+  "StartHour": "2",
+  "StartMinute": "2",
   "Grade": "3",
-  "Money": 4,
-  "Month": 1,
-  "StartHour": 2,
-  "StartMinute": 2
-}
-{
-  "Month": 1,
-  "Day": 1,
-  "StartHour": 2,
-  "StartMinute": 2,
-  "Grade": "3",
-  "Money": 4
+  "Money": "4"
 }

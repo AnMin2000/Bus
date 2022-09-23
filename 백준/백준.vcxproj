@@ -26,6 +26,7 @@
     <ClCompile Include="count.c" />
     <ClCompile Include="endUi.c" />
     <ClCompile Include="inquiryUi.c" />
+    <ClCompile Include="json.c" />
     <ClCompile Include="loginUi.c" />
     <ClCompile Include="main.c">
       <SDLCheck Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</SDLCheck>

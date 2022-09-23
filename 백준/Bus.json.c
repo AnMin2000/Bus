@@ -1,8 +1,8 @@
 #pragma once
 #include"header.h"
-char* Bus_read()    // 파일을 읽어서 내용을 반환하는 함수
+char* Bus_read(char* filename, int* readSize)    // 파일을 읽어서 내용을 반환하는 함수
 {
-    FILE* fp = fopen("Bus.json", "rb");
+    FILE* fp = fopen(filename, "rb");
     if (fp == NULL)
         return NULL;
 
@@ -21,10 +21,14 @@ char* Bus_read()    // 파일을 읽어서 내용을 반환하는 함수
     // 파일 내용 읽기
     if (fread(buffer, size, 1, fp) < 1)
     {
+        *readSize = 0;
         free(buffer);
         fclose(fp);
         return NULL;
     }
+
+    // 파일 크기를 넘겨줌
+    *readSize = size;
 
     fclose(fp);    // 파일 포인터 닫기
 
@@ -36,12 +40,12 @@ void Bus_append(Node* head)
 
     // JSON 문법에 맞춰서 fprintf 함수로 값 출력
     fprintf(fp, "{\n");
-    fprintf(fp, "  \"Month\": %d,\n", head->data.month);
-    fprintf(fp, "  \"Day\": %d,\n", head->data.day);
-    fprintf(fp, "  \"StartHour\": %d,\n", head->data.start_hour);
-    fprintf(fp, "  \"StartMinute\": %d,\n", head->data.start_min);
+    fprintf(fp, "  \"Month\": \"%d\",\n", head->data.month);
+    fprintf(fp, "  \"Day\": \"%d\",\n", head->data.day);
+    fprintf(fp, "  \"StartHour\": \"%d\",\n", head->data.start_hour);
+    fprintf(fp, "  \"StartMinute\": \"%d\",\n", head->data.start_min);
     fprintf(fp, "  \"Grade\": \"%s\",\n", head->data.grade);
-    fprintf(fp, "  \"Money\": %d\n", head->data.money);
+    fprintf(fp, "  \"Money\": \"%d\"\n", head->data.money);
     fprintf(fp, "}\n");
 
     fclose(fp);    // 파일 닫기

@@ -126,10 +126,12 @@ void Member_write();
 void Manager_read();
 void Manager_append(Manager manager);
 void Manager_write();
-char* Bus_read();
+char* Bus_read(char* filename, int* readSize);    // 파일을 읽어서 내용을 반환하는 함수
 void Bus_append(Node* head);
 void Bus_write(Node* head);
 void parseJSON(char* doc, int size, JSON* json);
+void freeJSON(JSON* json);    // JSON 해제 함수
+void json_print(); // 제이선 출력해 주는 함수
 // 텍스트 함수
 int table_count;
 int count; // 멤버 관리 변수
