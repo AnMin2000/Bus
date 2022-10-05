@@ -41,8 +41,9 @@ void manager_time()
 		scanf("%d", &head->data.money);
 
 		addFirst(head, head->data);
-		if (count > 0) Bus_write(head);
-		else  Bus_append(head);
+		//if (count > 0) Bus_write(head);
+		//else  
+		Bus_append(head);
 		count++;
 	}
 

@@ -19,14 +19,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Bus.json.c" />
+    <ClCompile Include="Bus.txt.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="calenderUi.c" />
     <ClCompile Include="cancleUi.c" />
     <ClCompile Include="changeUi.c" />
     <ClCompile Include="count.c" />
     <ClCompile Include="endUi.c" />
     <ClCompile Include="inquiryUi.c" />
-    <ClCompile Include="json.c" />
+    <ClCompile Include="json.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="loginUi.c" />
     <ClCompile Include="main.c">
       <SDLCheck Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</SDLCheck>
@@ -57,7 +61,9 @@
     <ClInclude Include="struct.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Bus.json" />
+    <None Include="Bus.txt">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </None>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
