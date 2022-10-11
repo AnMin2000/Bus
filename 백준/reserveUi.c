@@ -4,6 +4,7 @@
 void reserveUi() {
 	time_t seconds = time(NULL);
 	struct tm* now = localtime(&seconds);
+	Node* p = malloc(sizeof(Node));
 
 	Mouse();
 	square(85, 29, 12, 1);
@@ -62,7 +63,7 @@ void reserveUi() {
 	MouseClick(21, 50, 5, 11);  //출발
 	reserve_start_areaUi();
 	
-
+	clearconsole();
 	
 	square_char(70, 2, 19, 2, "※예약※");
 	square(35, 2, 29, 7);
@@ -73,6 +74,8 @@ void reserveUi() {
 	// 출발 시간
 	// 등급
 	// 잔여석
+	if(month == p->data.month && month == p->data.day)
+	
 	square3(35, 2, 29, 13);
 	square3(35, 2, 29, 15);
 	square3(35, 2, 29, 17);

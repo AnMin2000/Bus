@@ -63,6 +63,7 @@ typedef struct {
     int start_hour;       // 시작시간
     int start_min;        // 시작 분
     int money;
+    int seat;             // 좌석
 }Element;
 
 typedef struct{    // 연결 리스트의 노드 구조체
@@ -126,7 +127,7 @@ void Member_write();
 void Manager_read();
 void Manager_append(Manager manager);
 void Manager_write();
-char* Bus_read(char* filename, int* readSize);    // 파일을 읽어서 내용을 반환하는 함수
+char* Bus_read(char* filename);    // 파일을 읽어서 내용을 반환하는 함수
 void Bus_append(Node* head);
 void Bus_write(Node* head);
 void parseJSON(char* doc, int size, JSON* json);

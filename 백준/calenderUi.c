@@ -118,7 +118,7 @@ int calender() {
         if (reserve_day > 0)
         {
             //clearconsole();
-            printf("%d월 %d일",month, reserve_day);
+         //   printf("%d월 %d일",month, reserve_day);
             return reserve_day;  // 현재가 몇일 인지 관리해 주기 위한 변수
         }
         else if (next == 0) // 다음 달 클릭시

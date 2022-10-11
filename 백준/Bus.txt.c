@@ -1,48 +1,35 @@
 #pragma once
 #include"header.h"
-char* Bus_read(char* filename, int* readSize)    // 파일을 읽어서 내용을 반환하는 함수
+char* Bus_read(char* filename)    // 파일을 읽어서 내용을 반환하는 함수
 {
     FILE* fp = fopen(filename, "rb");
     if (fp == NULL)
         return NULL;
-
     int size;
     char* buffer;
-
     // 파일 크기 구하기
     fseek(fp, 0, SEEK_END);
     size = ftell(fp);
     fseek(fp, 0, SEEK_SET);
-
     // 파일 크기 + NULL 공간만큼 메모리를 할당하고 0으로 초기화
     buffer = malloc(size + 1);
     memset(buffer, 0, size + 1);
-
     // 파일 내용 읽기
     if (fread(buffer, size, 1, fp) < 1)
     {
-        *readSize = 0;
         free(buffer);
         fclose(fp);
         return NULL;
     }
-
     // 파일 크기를 넘겨줌
-    *readSize = size;
-
     fclose(fp);    // 파일 포인터 닫기
-
     return buffer;
 }
 void Bus_append(Node* head)
 {
     FILE* fp = fopen("Bus.txt", "a");
-    int size; // 문서 크기
-    char* doc = Bus_read("Bus.txt", &size);    // 파일에서 JSON 문서를 읽음, 문서 크기를 구함
-    // JSON 문법에 맞춰서 fprintf 함수로 값 출력
-
   
-    fprintf(fp, "%d %d %d %d %s %d", head->data.month, head->data.day, head->data.start_hour, head->data.start_min, head->data.grade, head->data.money);
+    fprintf(fp, "%d %d %d %d %s %d %d", head->data.month, head->data.day, head->data.start_hour, head->data.start_min, head->data.grade, head->data.seat, head->data.money);
     fprintf(fp, "\n");
 
     fclose(fp);    // 파일 닫기

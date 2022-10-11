@@ -5,8 +5,8 @@ void parseJSON(char* doc, int size, JSON* json)    // JSON 파싱 함수
     int tokenIndex = 0;    // 토큰 인덱스
     int pos = 0;           // 문자 검색 위치를 저장하는 변수
 
-    if (doc[pos] != '{')   // 문서의 시작이 {인지 검사
-        return;
+    //if (doc[pos] != '{')   // 문서의 시작이 {인지 검사
+    //    return;
 
     pos++;    // 다음 문자로
 
@@ -56,24 +56,24 @@ void freeJSON(JSON* json)    // JSON 해제 함수
             free(json->tokens[i].string);            // 동적 메모리 해제
     }
 }
-void json_print()
-{
-    int size; // 문서 크기
-    char* doc = Bus_read("Bus.json", &size);    // 파일에서 JSON 문서를 읽음, 문서 크기를 구함
-    if (doc == NULL)
-        return -1;
-
-    JSON json = { 0, };             // JSON 구조체 변수 선언 및 초기화
-
-    parseJSON(doc, size, &json);    // JSON 문서 파싱
-
-    printf("Month: %s\n", json.tokens[1].string);
-    printf("Day: %s\n", json.tokens[3].string);
-    printf("StartHour: %s\n", json.tokens[5].string);
-
-    freeJSON(&json);    // json에 할당된 동적 메모리 해제
-
-    free(doc);    // 문서 동적 메모리 해제
-
-    return 0;
-}
+//void json_print()
+//{
+//    int size; // 문서 크기
+//    char* doc = Bus_read("Bus.txt", &size);    // 파일에서 JSON 문서를 읽음, 문서 크기를 구함
+//    if (doc == NULL)
+//        return -1;
+//
+//    JSON json = { 0, };             // JSON 구조체 변수 선언 및 초기화
+//
+//    parseJSON(doc, size, &json);    // JSON 문서 파싱
+//
+//    printf("Month: %s\n", json.tokens[0].string);
+//    printf("Day: %s\n", json.tokens[3].string);
+//    printf("StartHour: %s\n", json.tokens[5].string);
+//
+//    freeJSON(&json);    // json에 할당된 동적 메모리 해제
+//
+//    free(doc);    // 문서 동적 메모리 해제
+//
+//    return 0;
+//}
