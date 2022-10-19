@@ -15,7 +15,7 @@ void manager_time()
 		goto_xy(40, 8);
 		printf("ขั");
 		scanf("%d %d", &head->data.month, &head->data.day);
-		if (head->data.month == 0 && head->data.day == 0) break;
+		if (head->data.month == 0 && head->data.day == 0) return 0;
 
 		square(36, 4, 37, 10);
 		goto_xy(40, 11);

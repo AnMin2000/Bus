@@ -2,9 +2,18 @@
 #include"header.h"
 
 void reserveUi() {
+	Mouse();
 	time_t seconds = time(NULL);
 	struct tm* now = localtime(&seconds);
 	Node* p = malloc(sizeof(Node));
+
+	char* doc = Bus_read("Bus.txt");
+	char* tmp[1000] = { 0 };
+
+	char* char_month[12] = { "1","2","3","4","5","6","7","8","9","10","11","12" };
+	char* char_day[31] = { "1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31" };
+	char* char_month_tmp[1] = { 0 };
+	char* char_day_tmp[1] = { 0 };
 
 	Mouse();
 	square(85, 29, 12, 1);
@@ -65,33 +74,48 @@ void reserveUi() {
 	
 	clearconsole();
 	
+	tmp[0] = strtok(doc, " ");
+	int i = 0;
+	while (tmp[i] != NULL)
+	{
+		//printf("%s\n", tmp[i++]);
+		i++;
+		tmp[i] = strtok(NULL, " ");
+	}
+
 	square_char(70, 2, 19, 2, "※예약※");
 	square(35, 2, 29, 7);
 	goto_xy(41, 8);
 	printf("%d. %d. %d", year, month, reserve_day);
+	//printf("%s %s", char_month[month - 1], tmp[]);
+	int j = 0, k = 0;
+
+	for (;;)
+	{
+		if (strcmp(char_month[month - 1], tmp[j++ * 7]) == 0)
+		{
+			if (strcmp(char_day[reserve_day - 1], tmp[k++ * 7 + 1]) == 0)
+				break;
+		}
+	}
 	square_char3(35, 2, 29, 9, "출발        등급         잔여석");
-	square3(35, 2, 29, 11);
 	// 출발 시간
 	// 등급
 	// 잔여석
-	if(month == p->data.month && month == p->data.day)
-	
-	square3(35, 2, 29, 13);
-	square3(35, 2, 29, 15);
-	square3(35, 2, 29, 17);
-	square3(35, 2, 29, 19);
-	square3(35, 2, 29, 21);
-	square3(35, 2, 29, 23);
-	square3(35, 2, 29, 25);
+
+	for (int i = 0; i < 7; i++)
+	{
+		square3(35, 2, 29, 11 + i * 2);
+		goto_xy(31, 12 + i * 2);
+		printf("%s:%s        %s           %s", tmp[((j - 1) * 7 + 2)+ (6 * i) ], tmp[((k - 1) * 7 + 1 + 2) + (6 * i)], tmp[((k - 1) * 7 + 1 + 3) + (6 * i)], tmp[((k - 1) * 7 + 1 + 4) + (6 * i)]);
+	}
 	square_char4(13, 2, 63, 7, "▦");
 	square_char3(13, 2, 63, 9, "요금");
-	square3(13, 2, 63, 11);
 	//요금
-	square3(13, 2, 63, 13);
-	square3(13, 2, 63, 15);
-	square3(13, 2, 63, 17);
-	square3(13, 2, 63, 19);
-	square3(13, 2, 63, 21);
-	square3(13, 2, 63, 23);
-	square3(13, 2, 63, 25);
+	for (int i = 0; i < 7; i++) {
+		square3(13, 2, 63, 11 + i * 2);
+		goto_xy(68, 12 + i * 2);
+		printf("%s", tmp[((k - 1) * 7 + 1 + 4) + (6 * i) + 1]);
+	}
+	ExClick();
 }

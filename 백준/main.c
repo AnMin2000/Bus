@@ -6,9 +6,6 @@ int main()
 	Manager_read();
 	Member_read();
 	MainUi();
-	//reserveUi();
-	
-	//manager_time();
 }
 //char* doc = Bus_read("Bus.txt");
 //char* tmp[1000] = { 0 };

@@ -102,7 +102,7 @@ void LoginUi()
 		{
 				//매출 확인
 		}
-		ExClick();
+		//ExClick();
 		
 		
 	}
