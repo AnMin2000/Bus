@@ -125,12 +125,14 @@ int calender() {
         {
             next_count = 1; // 처리 어케 할것인가
             day_count = 0;
+           // calender_count = -1;
             continue;
         }
         else if (next == -1)
         {
             next_count = 1; // 처리 어케 할것인가
             day_count = 0;
+           // calender_count = -1;
             continue;
         }
     }

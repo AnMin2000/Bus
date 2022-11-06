@@ -29,8 +29,9 @@ void Bus_append(Node* head)
 {
     FILE* fp = fopen("Bus.txt", "a");
   
-    fprintf(fp, "%d %d %d %d %s %d %d", head->data.month, head->data.day, head->data.start_hour, head->data.start_min, head->data.grade, head->data.seat, head->data.money);
-    fprintf(fp, "\n");
+    fprintf(fp, "%d %d %d %d %s %d %d ", head->data.month, head->data.day, 
+        head->data.start_hour, head->data.start_min, head->data.grade,
+        head->data.seat, head->data.money);
 
     fclose(fp);    // ÆÄÀÏ ´İ±â
 }
