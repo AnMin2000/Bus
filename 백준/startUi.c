@@ -44,13 +44,13 @@ void reserve_start_areaUi() {
 		square_char(30, 2, 40, 22, "대구");
 		square_char(30, 2, 40, 25, "울산");
 		square_char(30, 2, 40, 28, "부산");
-		strcpy(member[ticket_id_count].start_region, "서울");
+		strcpy(ticket[ticket_count - 1].start_region, "서울");
 		end = reserve_end_click(); 
-		strcpy(member[ticket_id_count].end_region, end_region[end]);
+		strcpy(ticket[ticket_count - 1].end_region, end_region[end]);
 		day = calender();
-		member[ticket_id_count].month = month;
-		member[ticket_id_count].day = day;
-		Member_write();
+		ticket[ticket_count - 1].month = month;
+		ticket[ticket_count - 1].day = day;
+		Ticket_append(ticket[ticket_count - 1]);
 	}
 	else if (start == 2) {
 		reserve_end_areaUi();
@@ -61,13 +61,13 @@ void reserve_start_areaUi() {
 		square_char(30, 2, 40, 22, "대구");
 		square_char(30, 2, 40, 25, "울산");
 		square_char(30, 2, 40, 28, "부산");
-		strcpy(member[ticket_id_count].start_region, "인천");
+		strcpy(ticket[ticket_count - 1].start_region, "인천");
 		end = reserve_end_click();
-		strcpy(member[ticket_id_count].end_region, end_region[end]);
+		strcpy(ticket[ticket_count - 1].end_region, end_region[end]);
 		day = calender();
-		member[ticket_id_count].month = month;
-		member[ticket_id_count].day = day;
-		Member_write();
+		ticket[ticket_count - 1].month = month;
+		ticket[ticket_count - 1].day = day;
+		Ticket_append(ticket[ticket_count - 1]);
 
 	}
 	else if (start == 3) {
@@ -79,13 +79,13 @@ void reserve_start_areaUi() {
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
 		square_char(30, 2, 40, 25, "울산");
 		square_char(30, 2, 40, 28, "부산");
-		strcpy(member[ticket_id_count].start_region, "대구");
+		strcpy(ticket[ticket_count - 1].start_region, "대구");
 		end = reserve_end_click();
-		strcpy(member[ticket_id_count].end_region, end_region[end]);
+		strcpy(ticket[ticket_count - 1].end_region, end_region[end]);
 		day = calender();
-		member[ticket_id_count].month = month;
-		member[ticket_id_count].day = day;
-		Member_write();
+		ticket[ticket_count - 1].month = month;
+		ticket[ticket_count - 1].day = day;
+		Ticket_append(ticket[ticket_count - 1]);
 
 	}
 	else if (start == 4) {
@@ -97,13 +97,13 @@ void reserve_start_areaUi() {
 		square_char(30, 2, 40, 25, "울산");
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
 		square_char(30, 2, 40, 28, "부산");
-		strcpy(member[ticket_id_count].start_region, "울산");
+		strcpy(ticket[ticket_count - 1].start_region, "울산");
 		end = reserve_end_click();
-		strcpy(member[ticket_id_count].end_region, end_region[end]);
+		strcpy(ticket[ticket_count - 1].end_region, end_region[end]);
 		day = calender();
-		member[ticket_id_count].month = month;
-		member[ticket_id_count].day = day;
-		Member_write();
+		ticket[ticket_count - 1].month = month;
+		ticket[ticket_count - 1].day = day;
+		Ticket_append(ticket[ticket_count - 1]);
 
 	}
 	else if (start == 5) {
@@ -115,13 +115,13 @@ void reserve_start_areaUi() {
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 8);
 		square_char(30, 2, 40, 28, "부산");
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
-		strcpy(member[ticket_id_count].start_region, "부산");
+		strcpy(ticket[ticket_count - 1].start_region, "부산");
 		end = reserve_end_click();
-		strcpy(member[ticket_id_count].end_region, end_region[end]);
+		strcpy(ticket[ticket_count - 1].end_region, end_region[end]);
 		day = calender();
-		member[ticket_id_count].month = month;
-		member[ticket_id_count].day = day;
-		Member_write();
+		ticket[ticket_count - 1].month = month;
+		ticket[ticket_count - 1].day = day;
+		Ticket_append(ticket[ticket_count - 1]);
 	}
 
 	/*goto_xy(0, 40);

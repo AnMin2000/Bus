@@ -3,8 +3,6 @@
 
 void LoginUi()
 {
-
-
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
 	Mouse();
 	char loginPw[20];
@@ -43,6 +41,7 @@ void LoginUi()
 				MouseClick(20, 32, 18, 20);
 				check = 1;
 				num++;
+				strcpy(ticket[ticket_count - 1].email, loginEmail);
 				goto ONE;
 			}
 			ticket_id_count++;

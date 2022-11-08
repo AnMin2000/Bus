@@ -23,11 +23,6 @@ void SignUpUi()
 	printf("ขั");
 	scanf("%s%*c", &member[count-1].number);
 
-	strcpy(member[count - 1].start_region, "0");
-	strcpy(member[count - 1].end_region, "0");
-	member[count - 1].month = 0;
-	member[count - 1].day = 0;
-
 	Member_append(member[count-1]);
 	count++;
 	Mouse();

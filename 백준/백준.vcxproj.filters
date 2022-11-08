@@ -87,12 +87,18 @@
     <ClCompile Include="json.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Ticket.txt.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Member.txt">
       <Filter>헤더 파일</Filter>
     </Text>
     <Text Include="Manager.txt">
+      <Filter>헤더 파일</Filter>
+    </Text>
+    <Text Include="Ticket.txt">
       <Filter>헤더 파일</Filter>
     </Text>
   </ItemGroup>

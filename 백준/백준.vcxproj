@@ -49,12 +49,14 @@
     </ClCompile>
     <ClCompile Include="table.c" />
     <ClCompile Include="memberTxt.c" />
+    <ClCompile Include="Ticket.txt.c" />
     <ClCompile Include="time.c" />
     <ClCompile Include="uiClick.c" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Manager.txt" />
     <Text Include="Member.txt" />
+    <Text Include="Ticket.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header.h" />

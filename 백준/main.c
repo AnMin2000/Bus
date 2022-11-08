@@ -2,8 +2,12 @@
 #include"header.h"
 int main()
 {
-	/*Manager_read();
+	Ticket_read();
+	//Manager_read();
 	Member_read();
-	MainUi();*/
-	reserveUi();
+	LoginUi();
+	////reserveUi();
+	//Member_read();
+	//SignUpUi();
+	//reserveUi();
 }

@@ -1,5 +1,6 @@
 #pragma once
 #pragma warning(disable : 4996)
+#pragma warning(disable : 6031)
 #define MAX 1000
 #define TOKEN_COUNT 1000    // 토큰의 최대 개수
 #include<stdio.h>
@@ -45,10 +46,15 @@ typedef struct {
 	char email[50];
 	char pw[20];
 	char number[15];
-    char start_region[10];
-    char end_region[10];
-    int month;
-    int day;
+    char start_region[10]; //출발지역
+    char end_region[10];   //도착지역
+    char grade[10];        //버스등급
+    int month;             //예약  달
+    int day;               //예약  일
+    int hour;              //출발시간
+    int min;               //출발  분
+    int seat;              //잔여좌석
+    int money;             //버스요금
 }Book;
 
 typedef struct {
@@ -72,6 +78,8 @@ typedef struct{    // 연결 리스트의 노드 구조체
 }Node;
 
 Book member[MAX];
+Book ticket[MAX];
+
 Manager manager[MAX];
 void MainUi();
 void reserveUi();
@@ -127,6 +135,9 @@ void Member_write();
 void Manager_read();
 void Manager_append(Manager manager);
 void Manager_write();
+void Ticket_read();
+void Ticket_append(Book T);
+void Ticket_write();
 char* Bus_read(char* filename);    // 파일을 읽어서 내용을 반환하는 함수
 void Bus_append(Node* head);
 void Bus_write(Node* head);
@@ -150,5 +161,6 @@ int today; // 다른 달은 1일로 넣어버리기 위한 값
 int check; // 로그인 했는지 안했는지 체크  1이면 로그인
 int ticket_id_count; // 티켓 몇번째 id인지 관리 변수
 int blank_count; // 시작 달력 공백이 몇인지 계산해서 회색으로 바꿔주기 위한 코드
+int ticket_count; // 티켓 파일에 쓸 카운트 변수
 
 // 첫번째 연결리스트 입력 받기 위한 변수
