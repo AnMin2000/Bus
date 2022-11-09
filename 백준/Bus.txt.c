@@ -29,7 +29,7 @@ void Bus_append(Node* head)
 {
     FILE* fp = fopen("Bus.txt", "a");
   
-    fprintf(fp, "%d %d %d %d %s %d %d ", head->data.month, head->data.day, 
+    fprintf(fp, "%d %d %s %s %d %d %s %d %d ", head->data.month, head->data.day, head->data.start_region, head->data.end_region,
         head->data.start_hour, head->data.start_min, head->data.grade,
         head->data.seat, head->data.money);
 
@@ -44,6 +44,8 @@ void Bus_write(Node* head)
         fprintf(fp, "{\n");
         fprintf(fp, "  \"Month\": %d,\n", curr->data.month);
         fprintf(fp, "  \"Day\": %d,\n", curr->data.day);
+        fprintf(fp, "  \"StartRegion\": %s,\n", curr->data.start_region);
+        fprintf(fp, "  \"EndRegion\": %s,\n", curr->data.end_region);
         fprintf(fp, "  \"StartHour\": %d,\n", curr->data.start_hour);
         fprintf(fp, "  \"EndHour\": %d,\n", curr->data.start_min);
         fprintf(fp, "  \"Grade\": \"%s\",\n", curr->data.grade);

@@ -51,6 +51,7 @@ void reserve_start_areaUi() {
 		ticket[ticket_count - 1].month = month;
 		ticket[ticket_count - 1].day = day;
 		Ticket_append(ticket[ticket_count - 1]);
+		ticket_count++;
 	}
 	else if (start == 2) {
 		reserve_end_areaUi();
@@ -68,7 +69,7 @@ void reserve_start_areaUi() {
 		ticket[ticket_count - 1].month = month;
 		ticket[ticket_count - 1].day = day;
 		Ticket_append(ticket[ticket_count - 1]);
-
+		ticket_count++;
 	}
 	else if (start == 3) {
 		reserve_end_areaUi();
@@ -86,7 +87,7 @@ void reserve_start_areaUi() {
 		ticket[ticket_count - 1].month = month;
 		ticket[ticket_count - 1].day = day;
 		Ticket_append(ticket[ticket_count - 1]);
-
+		ticket_count++;
 	}
 	else if (start == 4) {
 		reserve_end_areaUi();
@@ -104,7 +105,7 @@ void reserve_start_areaUi() {
 		ticket[ticket_count - 1].month = month;
 		ticket[ticket_count - 1].day = day;
 		Ticket_append(ticket[ticket_count - 1]);
-
+		ticket_count++;
 	}
 	else if (start == 5) {
 		reserve_end_areaUi();
@@ -122,6 +123,7 @@ void reserve_start_areaUi() {
 		ticket[ticket_count - 1].month = month;
 		ticket[ticket_count - 1].day = day;
 		Ticket_append(ticket[ticket_count - 1]);
+		ticket_count++;
 	}
 
 	/*goto_xy(0, 40);

@@ -96,9 +96,9 @@ void reserveUi() {
 
 	for (;;)
 	{
-		if (strcmp(char_month[month - 1], tmp[j * 7]) == 0)
+		if (strcmp(ticket[ticket_count].month, tmp[j * 7]) == 0)
 		{
-			if (strcmp(char_day[reserve_day - 1], tmp[j * 7 + k]) == 0)
+			if (strcmp(char_day[reserve_day - 1], tmp[j * 7 + k]) == 0) // 이쪽부분붙터 다시 해야됨
 			{ // 달 일 출발지역 도착지역 
 				//if(tmp[j*7+k+], char_region[q])
 				for (int i = 0; i < 7; i++)

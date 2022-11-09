@@ -59,11 +59,26 @@ typedef struct {
 
 typedef struct {
     char email[50];
+    char start_region[10]; //출발지역
+    char end_region[10];   //도착지역
+    char grade[10];        //버스등급
+    int month;             //예약  달
+    int day;               //예약  일
+    int hour;              //출발시간
+    int min;               //출발  분
+    int seat;              //잔여좌석
+    int money;             //버스요금
+}Ticket;
+
+typedef struct {
+    char email[50];
     char pw[20];
 }Manager;
 
 typedef struct {
     char grade[5];        // 등급
+    char start_region[10]; //출발지역
+    char end_region[10];   //도착지역
     int month;
     int day;
     int start_hour;       // 시작시간
@@ -78,7 +93,7 @@ typedef struct{    // 연결 리스트의 노드 구조체
 }Node;
 
 Book member[MAX];
-Book ticket[MAX];
+Ticket ticket[MAX];
 
 Manager manager[MAX];
 void MainUi();
@@ -136,7 +151,7 @@ void Manager_read();
 void Manager_append(Manager manager);
 void Manager_write();
 void Ticket_read();
-void Ticket_append(Book T);
+void Ticket_append(Ticket T);
 void Ticket_write();
 char* Bus_read(char* filename);    // 파일을 읽어서 내용을 반환하는 함수
 void Bus_append(Node* head);

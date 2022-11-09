@@ -31,7 +31,7 @@ void Ticket_write() {
 
 	fclose(fp);
 }
-void Ticket_append(Book T) {
+void Ticket_append(Ticket T) {
 	FILE* fp = fopen("Ticket.txt", "a");
 	
 	//strcpy(ticket[ticket_count - 1].email, "0");
