@@ -94,28 +94,26 @@ void reserveUi() {
 	
 	square_char3(35, 2, 29, 9, "출발        등급         잔여석");
 
-	for (;;)
+	clearconsole();
+	printf("%d",ticket_count-2);
+	/*while (1)
 	{
-		if (strcmp(ticket[ticket_count].month, tmp[j * 7]) == 0)
+		j = 0;
+		if (strcmp(ticket[ticket_count].month, tmp[j * 9]) == 0)
 		{
-			if (strcmp(char_day[reserve_day - 1], tmp[j * 7 + k]) == 0) // 이쪽부분붙터 다시 해야됨
-			{ // 달 일 출발지역 도착지역 
-				//if(tmp[j*7+k+], char_region[q])
-				for (int i = 0; i < 7; i++)
-				{
-
-					square3(35, 2, 29, 11 + i * 2);
-					goto_xy(31, 12 + i * 2);
-					printf("%s:%s        %s           %s", tmp[i * 7 + 2], tmp[i * 7 + 3], tmp[i * 7 + 4], tmp[i * 7 + 5]);
-				}
-				break;
-			}
-			k++;
+			
 		}
 		j++;
-	}
-	
-	
+	}*/
+		/*for (int i = 0; i < 7; i++)
+					{
+
+						square3(35, 2, 29, 11 + i * 2);
+						goto_xy(31, 12 + i * 2);
+						printf("%s:%s        %s           %s", tmp[i * 7 + 2], tmp[i * 7 + 3], tmp[i * 7 + 4], tmp[i * 7 + 5]);
+					}
+					break;*/
+	ExClick();
 	
 	// 출발 시간
 	// 등급
@@ -130,5 +128,5 @@ void reserveUi() {
 		printf("%s", tmp[6 + (7 * i)]);
 	}
 	goto_xy(0, 30);
-	ExClick();
+	//ExClick();
 }
