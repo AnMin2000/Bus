@@ -88,33 +88,32 @@ void reserveUi() {
 	goto_xy(41, 8);
 	printf("%d. %d. %d", year, month, reserve_day);
 
-	int j = 0, k = 0, q = 0;
-	//printf("\n%s %s \n%s %s", char_month[month - 1], tmp[j * 7], char_day[reserve_day - 1], tmp[k * 7 + 1]);
-	//ExClick();
+	int j = 0;
 	
 	square_char3(35, 2, 29, 9, "출발        등급         잔여석");
 
-	clearconsole();
-	printf("%d",ticket_count-2);
-	/*while (1)
+//	clearconsole();
+////	printf("%s %s %s %s", ticket[ticket_count - 2].month, tmp[j * 9], ticket[ticket_count - 2].day, tmp[(j * 9) + 1]);
+//	printf("%s %s", tmp[j * 9], tmp[(j * 9) + 1]);
+//	ExClick();
+	//printf("%d", ticket_tmp1);
+	//printf("%d",ticket_count-2); // 둘다 현재값
+
+	while (1)
 	{
-		j = 0;
-		if (strcmp(ticket[ticket_count].month, tmp[j * 9]) == 0)
+		if ((strcmp(ticket[ticket_count - 2].month, tmp[j * 9]) == 0) && (strcmp(ticket[ticket_count - 2].day, tmp[(j * 9) + 1]) == 0) &&
+			(strcmp(ticket[ticket_count - 2].start_region, tmp[(j * 9) + 2]) == 0) &&( strcmp(ticket[ticket_count - 2].end_region, tmp[(j * 9) + 3]) == 0))
 		{
-			
+			for (int i = 0; i < 7; i++)
+			{
+				square3(35, 2, 29, 11 + i * 2);
+				goto_xy(31, 12 + i * 2);
+				printf("%s:%s        %s           %s", tmp[(j * 9 + 4) + (i * 9)], tmp[(j * 9 + 5) + (i * 9)], tmp[(j * 9 + 6) + (i*9)], tmp[(j * 9 + 7) + (i * 9)]);
+			}
+			break;
 		}
 		j++;
-	}*/
-		/*for (int i = 0; i < 7; i++)
-					{
-
-						square3(35, 2, 29, 11 + i * 2);
-						goto_xy(31, 12 + i * 2);
-						printf("%s:%s        %s           %s", tmp[i * 7 + 2], tmp[i * 7 + 3], tmp[i * 7 + 4], tmp[i * 7 + 5]);
-					}
-					break;*/
-	ExClick();
-	
+	}
 	// 출발 시간
 	// 등급
 	// 잔여석
@@ -125,8 +124,8 @@ void reserveUi() {
 	for (int i = 0; i < 7; i++) {
 		square3(13, 2, 63, 11 + i * 2);
 		goto_xy(68, 12 + i * 2);
-		printf("%s", tmp[6 + (7 * i)]);
+		printf("%s", tmp[(j * 9 + 8) + (i * 9)]);
 	}
 	goto_xy(0, 30);
-	//ExClick();
+	ExClick();
 }

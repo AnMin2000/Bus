@@ -62,8 +62,8 @@ typedef struct {
     char start_region[10]; //출발지역
     char end_region[10];   //도착지역
     char grade[10];        //버스등급
-    int month;             //예약  달
-    int day;               //예약  일
+    char month[10];        //예약  달
+    char day[10];          //예약  일
     int hour;              //출발시간
     int min;               //출발  분
     int seat;              //잔여좌석
@@ -177,5 +177,8 @@ int check; // 로그인 했는지 안했는지 체크  1이면 로그인
 int ticket_id_count; // 티켓 몇번째 id인지 관리 변수
 int blank_count; // 시작 달력 공백이 몇인지 계산해서 회색으로 바꿔주기 위한 코드
 int ticket_count; // 티켓 파일에 쓸 카운트 변수
-
+int ticket_tmp1;
+int ticket_tmp2;
+int ticket_tmp3;
+int ticket_tmp4;
 // 첫번째 연결리스트 입력 받기 위한 변수
