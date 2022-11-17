@@ -2,10 +2,15 @@
 #include"header.h"
 int main()
 {
-	Ticket_read();
-	Member_read();
+	Mouse();
+	square(85, 29, 12, 1);
+	//square_char(40, 2, 32, 5, "변경 할 좌석을 먼저 선택해 주세요");
+
+	ExClick();
+	//Ticket_read();
+	//Member_read();
 	//manager_time();
-	LoginUi();
+	//LoginUi();
 	//printf("%s", ticket[ticket_count - 2].month);
 	//할일 : 달, 일, 출발지역, 도착 지역 비교하기 전에 reserve함수 반복문 다시 하기
 }

@@ -126,6 +126,17 @@ void reserveUi() {
 		goto_xy(68, 12 + i * 2);
 		printf("%s", tmp[(j * 9 + 8) + (i * 9)]);
 	}
-	goto_xy(0, 30);
-	ExClick();
+	int xx, yy;
+	i = 0;
+	while (1) {
+		click(&xx, &yy);
+		if (xx >= 30 && xx <= 63 && yy == 12 + (i * 2) && i <= 6) {
+			clearconsole();
+			break;
+		}
+		i++;
+	}
+	//갖고온 값 토대로 예약 부분 변경해야함.
+	//goto_xy(0, 30);
+	//ExClick();
 }
