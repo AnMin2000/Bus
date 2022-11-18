@@ -41,6 +41,7 @@ void table(int width, int height, int width_len, int height_len, int x, int y, c
 }
 void original_table(int width, int height, int width_len, int height_len, int x, int y, char* msg[100])
 {
+	int table_count = 0;
 	for (int j = 0; j < height_len; j++) {
 		for (int i = 0; i < width_len; i++) {
 			if (j == 0) square_char(width, height, x + (width * i) - i, y + (height * j), msg[table_count]);
