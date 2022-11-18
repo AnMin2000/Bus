@@ -163,3 +163,147 @@ int bustime_click()
 		}
 	}
 }
+int seat_click()
+{
+	int xx, yy;
+	while (1) {
+		click(&xx, &yy);
+		if (xx >= 41 && xx <= 44 && yy == 11)
+		{
+			clearconsole();
+			return 1;
+		}
+		else if ((xx >= 45 && xx <= 48 && yy == 11)) {
+			clearconsole();
+			return 2;
+		}
+		else if (xx >= 55 && xx <= 58 && yy == 11)
+		{
+			clearconsole();
+			return 3;
+		}
+		else if (xx >= 59 && xx <= 63 && yy == 11)
+		{
+			clearconsole();
+			return 4;
+		}
+		else if ((xx >= 41 && xx <= 44 && yy == 13))
+		{
+			clearconsole();
+			return 5;
+		}
+		else if ((xx >= 45 && xx <= 48 && yy == 13))
+		{
+			clearconsole();
+			return 6;
+		}
+		else if (xx >= 55 && xx <= 58 && yy == 13)
+		{
+			clearconsole();
+			return 7;
+		}
+		else if (xx >= 59 && xx <= 63 && yy == 13)
+		{
+			clearconsole();
+			return 8;
+		}
+		else if ((xx >= 41 && xx <= 44 && yy == 15))
+		{
+			clearconsole();
+			return 9;
+		}
+		else if ((xx >= 45 && xx <= 48 && yy == 15))
+		{
+			clearconsole();
+			return 10;
+		}
+		else if (xx >= 55 && xx <= 58 && yy == 15)
+		{
+			clearconsole();
+			return 11;
+		}
+		else if (xx >= 59 && xx <= 63 && yy == 15)
+		{
+			clearconsole();
+			return 12;
+		}
+		else if ((xx >= 41 && xx <= 44 && yy == 17)) {
+			clearconsole();
+			return 13;
+		}
+		else if ((xx >= 45 && xx <= 48 && yy == 17)) {
+			clearconsole();
+			return 14;
+		}
+		else if (xx >= 55 && xx <= 58 && yy == 17)
+		{
+			clearconsole();
+			return 15;
+		}
+		else if (xx >= 59 && xx <= 63 && yy == 17)
+		{
+			clearconsole();
+			return 16;
+		}
+		else if ((xx >= 41 && xx <= 44 && yy == 19)) {
+			clearconsole();
+			return 17;
+		}
+		else if ((xx >= 45 && xx <= 48 && yy == 19)) {
+			clearconsole();
+			return 18;
+		}
+		else if (xx >= 55 && xx <= 58 && yy == 19)
+		{
+			clearconsole();
+			return 19;
+		}
+		else if (xx >= 59 && xx <= 63 && yy == 19)
+		{
+			clearconsole();
+			return 20;
+		}
+		else if ((xx >= 41 && xx <= 44 && yy == 21)) {
+			clearconsole();
+			return 21;
+		}
+		else if ((xx >= 45 && xx <= 48 && yy == 21)) {
+			clearconsole();
+			return 22;
+		}
+		else if (xx >= 55 && xx <= 58 && yy == 21)
+		{
+			clearconsole();
+			return 23;
+		}
+		else if (xx >= 59 && xx <= 63 && yy == 21)
+		{
+			clearconsole();
+			return 24;
+		}
+		else if (xx >= 41 && xx <= 44 && yy == 23)
+		{
+			clearconsole();
+			return 25;
+		}
+		else if ((xx >= 45 && xx <= 48 && yy == 23))
+		{
+			clearconsole();
+			return 26;
+		}
+		else if (xx >= 55 && xx <= 58 && yy == 23)
+		{
+			clearconsole();
+			return 27;
+		}
+		else if (xx >= 59 && xx <= 63 && yy == 23)
+		{
+			clearconsole();
+			return 28;
+		}
+		else {
+		seat_click();
+		return;
+		}
+	}
+}

@@ -52,9 +52,8 @@ void reserve_start_areaUi() {
 		strcpy(ticket[ticket_count - 1].end_region, end_region[end]);
 		strcpy(ticket[ticket_count - 1].month , int_month[month - 1]);
 		strcpy(ticket[ticket_count - 1].day , int_day[day-1]);
-		Ticket_append(ticket[ticket_count - 1]);
-		ticket_tmp1 = ticket_count - 1;
-		ticket_count++;
+		//Ticket_append(ticket[ticket_count - 1]);
+		//ticket_count++;
 	}
 	else if (start == 2) {
 		reserve_end_areaUi();
@@ -71,8 +70,8 @@ void reserve_start_areaUi() {
 		strcpy(ticket[ticket_count - 1].end_region, end_region[end]);
 		strcpy(ticket[ticket_count - 1].month, int_month[month - 1]);
 		strcpy(ticket[ticket_count - 1].day, int_day[day - 1]);	
-		Ticket_append(ticket[ticket_count - 1]);
-		ticket_count++;
+		//Ticket_append(ticket[ticket_count - 1]);
+		//ticket_count++;
 	}
 	else if (start == 3) {
 		reserve_end_areaUi();
@@ -89,8 +88,8 @@ void reserve_start_areaUi() {
 		strcpy(ticket[ticket_count - 1].end_region, end_region[end]);
 		strcpy(ticket[ticket_count - 1].month, int_month[month - 1]);
 		strcpy(ticket[ticket_count - 1].day, int_day[day - 1]);
-		Ticket_append(ticket[ticket_count - 1]);
-		ticket_count++;
+		//Ticket_append(ticket[ticket_count - 1]);
+		//ticket_count++;
 	}
 	else if (start == 4) {
 		reserve_end_areaUi();
@@ -107,8 +106,8 @@ void reserve_start_areaUi() {
 		strcpy(ticket[ticket_count - 1].end_region, end_region[end]);
 		strcpy(ticket[ticket_count - 1].month, int_month[month - 1]);
 		strcpy(ticket[ticket_count - 1].day, int_day[day - 1]);
-		Ticket_append(ticket[ticket_count - 1]);
-		ticket_count++;
+		//Ticket_append(ticket[ticket_count - 1]);
+		//ticket_count++;
 	}
 	else if (start == 5) {
 		reserve_end_areaUi();
@@ -125,8 +124,8 @@ void reserve_start_areaUi() {
 		strcpy(ticket[ticket_count - 1].end_region, end_region[end]);
 		strcpy(ticket[ticket_count - 1].month, int_month[month - 1]);
 		strcpy(ticket[ticket_count - 1].day, int_day[day - 1]);
-		Ticket_append(ticket[ticket_count - 1]);
-		ticket_count++;
+		//Ticket_append(ticket[ticket_count - 1]);
+		//ticket_count++;
 	}
 
 	/*goto_xy(0, 40);

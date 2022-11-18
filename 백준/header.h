@@ -64,10 +64,10 @@ typedef struct {
     char grade[10];        //버스등급
     char month[10];        //예약  달
     char day[10];          //예약  일
-    int hour;              //출발시간
-    int min;               //출발  분
+    char hour[10];              //출발시간
+    char min[10];               //출발  분
     int seat;              //잔여좌석
-    int money;             //버스요금
+    char money[10];             //버스요금
 }Ticket;
 
 typedef struct {
@@ -136,6 +136,7 @@ int calenderUiClick();
 int reserve_start_click();
 int reserve_end_click();
 int bustime_click();
+int seat_click(); // 사용자가 몇번 좌석을 선택 했는지 알려주는 함수
 // 마우스 좌표 함수
 //void reset();
 void countTime(int a);

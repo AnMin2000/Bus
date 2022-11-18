@@ -92,23 +92,19 @@ void reserveUi() {
 	
 	square_char3(35, 2, 29, 9, "출발        등급         잔여석");
 
-//	clearconsole();
-////	printf("%s %s %s %s", ticket[ticket_count - 2].month, tmp[j * 9], ticket[ticket_count - 2].day, tmp[(j * 9) + 1]);
-//	printf("%s %s", tmp[j * 9], tmp[(j * 9) + 1]);
-//	ExClick();
-	//printf("%d", ticket_tmp1);
-	//printf("%d",ticket_count-2); // 둘다 현재값
+
 
 	while (1)
 	{
-		if ((strcmp(ticket[ticket_count - 2].month, tmp[j * 9]) == 0) && (strcmp(ticket[ticket_count - 2].day, tmp[(j * 9) + 1]) == 0) &&
-			(strcmp(ticket[ticket_count - 2].start_region, tmp[(j * 9) + 2]) == 0) &&( strcmp(ticket[ticket_count - 2].end_region, tmp[(j * 9) + 3]) == 0))
+		if ((strcmp(ticket[ticket_count - 1].month, tmp[j * 9]) == 0) && (strcmp(ticket[ticket_count - 1].day, tmp[(j * 9) + 1]) == 0) &&
+			(strcmp(ticket[ticket_count - 1].start_region, tmp[(j * 9) + 2]) == 0) &&( strcmp(ticket[ticket_count - 1].end_region, tmp[(j * 9) + 3]) == 0))
 		{
 			for (int i = 0; i < 7; i++)
 			{
 				square3(35, 2, 29, 11 + i * 2);
 				goto_xy(31, 12 + i * 2);
 				printf("%s:%s        %s           %s", tmp[(j * 9 + 4) + (i * 9)], tmp[(j * 9 + 5) + (i * 9)], tmp[(j * 9 + 6) + (i*9)], tmp[(j * 9 + 7) + (i * 9)]);
+																//시간						//분						//등급					//금액
 			}
 			break;
 		}
@@ -136,7 +132,30 @@ void reserveUi() {
 		}
 		i++;
 	}
+
+
+	strcpy(ticket[ticket_count - 1].hour, tmp[(j * 9 + 4) + (i * 9)]);
+	strcpy(ticket[ticket_count - 1].min, tmp[(j * 9 + 5) + (i * 9)]);
+	strcpy(ticket[ticket_count - 1].grade, tmp[(j * 9 + 6) + (i * 9)]);
+	strcpy(ticket[ticket_count - 1].money, tmp[(j * 9 + 8) + (i * 9)]);
+
+	char* msg[14] = { "1","2","5","6","9","10","13","14","17","18","21","22","25","26" };
+	char* msg2[14] = { "3","4","7","8","11","12","15","16","19","20","23","24","27","28" };
+	square(85, 29, 12, 1);
+	square_char(40, 2, 32, 5, "변경 할 좌석을 먼저 선택해 주세요");
+	square_char(23, 2, 40, 8, "운전석       출입문");
+	original_table(5, 2, 2, 7, 40, 10, msg);
+	original_table(5, 2, 2, 7, 54, 10, msg2);
+	goto_xy(40, 10); printf("┣"); goto_xy(62, 10); printf("┨"); goto_xy(49, 24); printf("━━━━━┛");
+	
+	int seat_click_tmp;
+	seat_click_tmp = seat_click();
+	ticket[ticket_count - 1].seat = seat_click_tmp;
+	
+	Ticket_append(ticket[ticket_count - 1]); // << 이거 계속 옆으로 넘겨줘야함 ***************중요***********************
+	ticket_count++;
 	//갖고온 값 토대로 예약 부분 변경해야함.
 	//goto_xy(0, 30);
 	//ExClick();
+	
 }
