@@ -88,12 +88,12 @@ void reserveUi() {
 	goto_xy(41, 8);
 	printf("%d. %d. %d", year, month, reserve_day);
 
-	int j = 0;
+	
 	
 	square_char3(35, 2, 29, 9, "출발        등급         잔여석");
 
 
-
+	int j = 0;
 	while (1)
 	{
 		if ((strcmp(ticket[ticket_count - 1].month, tmp[j * 9]) == 0) && (strcmp(ticket[ticket_count - 1].day, tmp[(j * 9) + 1]) == 0) &&
@@ -142,18 +142,30 @@ void reserveUi() {
 	char* msg[14] = { "1","2","5","6","9","10","13","14","17","18","21","22","25","26" };
 	char* msg2[14] = { "3","4","7","8","11","12","15","16","19","20","23","24","27","28" };
 	square(85, 29, 12, 1);
-	square_char(40, 2, 32, 5, "변경 할 좌석을 먼저 선택해 주세요");
+	square_char(40, 2, 32, 5, "탑승 할 좌석을 먼저 선택해 주세요");
 	square_char(23, 2, 40, 8, "운전석       출입문");
 	original_table(5, 2, 2, 7, 40, 10, msg);
 	original_table(5, 2, 2, 7, 54, 10, msg2);
-	goto_xy(40, 10); printf("┣"); goto_xy(62, 10); printf("┨"); goto_xy(49, 24); printf("━━━━━┛");
+	goto_xy(40, 10); printf("┣"); goto_xy(62, 10); printf("┫"); goto_xy(49, 24); printf("━━━━━┛");
 	
-	int seat_click_tmp;
+	int seat_click_tmp; //몇번좌석을 클릭햇는지 나오는 거
 	seat_click_tmp = seat_click();
 	ticket[ticket_count - 1].seat = seat_click_tmp;
 	
 	Ticket_append(ticket[ticket_count - 1]); // << 이거 계속 옆으로 넘겨줘야함 ***************중요***********************
 	ticket_count++;
+
+	square(85, 29, 12, 1);
+	square(40, 2, 33, 8);
+	goto_xy(46, 9);
+	printf("결제금액 %s원", ticket[ticket_count - 2].money);
+	square_char(30, 2, 38, 12, "결제하시겠습니까?");
+	square_char(7, 2, 42, 16, "예");
+	square_char(11, 2, 52, 16, "아니오");
+	MouseClick(43, 48, 16, 18);
+	square(85, 29, 12, 1);
+	square_char(30, 2, 38, 12, "결제완료되었습니다...");
+	countTime(1);
 	//갖고온 값 토대로 예약 부분 변경해야함.
 	//goto_xy(0, 30);
 	//ExClick();

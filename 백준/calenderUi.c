@@ -95,7 +95,7 @@ int calender() {
         }
         goto_xy(50, 6);
         if(original_month==month)
-        printf("%d.%d.%d", 1900 + now->tm_year, month, today);
+        printf("  %d.%d", 1900 + now->tm_year, month);
         else {
             goto_xy(51, 6);
             printf("%d.%d", 1900 + now->tm_year, month);
