@@ -178,4 +178,5 @@ int check; // 로그인 했는지 안했는지 체크  1이면 로그인
 int ticket_id_count; // 티켓 몇번째 id인지 관리 변수
 int blank_count; // 시작 달력 공백이 몇인지 계산해서 회색으로 바꿔주기 위한 코드
 int ticket_count; // 티켓 파일에 쓸 카운트 변수
+int cancle_count; // 티켓 삭제후 -1을 위한 변수
 // 첫번째 연결리스트 입력 받기 위한 변수

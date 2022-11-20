@@ -137,6 +137,15 @@ void changeUi()
 
 	Ticket_write();
 
+	square(85, 29, 12, 1);
+	square_char(30, 2, 38, 12, "변경하시겠습니까?");
+	square_char(7, 2, 42, 16, "예");
+	square_char(11, 2, 52, 16, "아니오");
+	MouseClick(43, 48, 16, 18);
+	square(85, 29, 12, 1);
+	square_char(30, 2, 38, 12, "변경완료되었습니다...");
+	countTime(1);
+
 	goto_xy(0, 30);
 	ExClick();
 }

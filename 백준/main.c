@@ -5,7 +5,9 @@ int main()
 	Mouse();
 	
 	Ticket_read();
-//	Member_read();
-	//LoginUi();
-	changeUi();
+	Member_read();
+	 LoginUi();
+	//changeUi();
+	//inquiryUi();
+	//ExClick();
 }
