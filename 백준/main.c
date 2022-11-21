@@ -6,7 +6,9 @@ int main()
 	
 	Ticket_read();
 	Member_read();
-	 LoginUi();
+	LoginUi();
+
+	//modifyUi();
 	//changeUi();
 	//inquiryUi();
 	//ExClick();

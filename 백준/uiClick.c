@@ -307,3 +307,22 @@ int seat_click()
 		}
 	}
 }
+int modify_click()
+{
+	int xx, yy;
+	while (1) {
+		click(&xx, &yy);
+		if (xx >= 42 && xx <= 47 && yy >= 15 && yy <= 18) {
+			clearconsole();
+			return 1;
+		}
+		else if (xx >= 61 && xx <= 66 && yy >= 15 && yy <= 18) {
+			clearconsole();
+			return 2;
+		}
+		else if (xx >= 44 && xx <= 63 && yy >= 25 && yy <= 27) {
+			clearconsole();
+			return 3;
+		}
+	}
+}

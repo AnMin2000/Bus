@@ -45,7 +45,7 @@ struct {
 typedef struct {
 	char email[50];
 	char pw[20];
-	char number[15];
+	char number[50];
     char start_region[10]; //출발지역
     char end_region[10];   //도착지역
     char grade[10];        //버스등급
@@ -137,6 +137,7 @@ int reserve_start_click();
 int reserve_end_click();
 int bustime_click();
 int seat_click(); // 사용자가 몇번 좌석을 선택 했는지 알려주는 함수
+int modify_click(); // modify 함수에서 전화번호 변경, 비밀번호 변경, 회원 탈퇴를 위한 함수
 // 마우스 좌표 함수
 //void reset();
 void countTime(int a);

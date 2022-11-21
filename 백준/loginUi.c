@@ -33,7 +33,7 @@ void LoginUi()
 		//goto_xy(19, 16);
 		//printf("ขั");
 		//scanf("%s%*c", &loginPw);
-		strcpy(loginEmail, "id1");
+		strcpy(loginEmail, "iededg@naver.com");
 		strcpy(loginPw, "123");
 		clearconsole();
 
