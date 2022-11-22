@@ -104,10 +104,11 @@ void modifyUi();
 void inquiryUi();
 void LoginUi();
 void SignUpUi();
-void searchUi();
 int calender();             //         calenderUi       calender_ui
 void reserve_start_areaUi();
 void reserve_end_areaUi();
+void salesUi();
+void searchUi();
 // UI함수
 void table(int width, int height, int width_len, int height_len, int x, int y, char* msg[100]);// 가로 개수, 세로 개수, 가로 크기, 세로 크기, x 좌표, y 좌표, (문자?)
 void original_table(int width, int height, int width_len, int height_len, int x, int y, char* msg[100]);// 가로 개수, 세로 개수, 가로 크기, 세로 크기, x 좌표, y 좌표, (문자?)

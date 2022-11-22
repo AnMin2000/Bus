@@ -41,6 +41,7 @@
     <ClCompile Include="modifyUi.c" />
     <ClCompile Include="click.c" />
     <ClCompile Include="reserveUi.c" />
+    <ClCompile Include="sales.c" />
     <ClCompile Include="searchUi.c" />
     <ClCompile Include="signupUi.c" />
     <ClCompile Include="startUi.c" />

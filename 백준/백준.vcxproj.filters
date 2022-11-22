@@ -48,9 +48,6 @@
     <ClCompile Include="signupUi.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="searchUi.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="startUi.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -88,6 +85,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Ticket.txt.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="sales.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="searchUi.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

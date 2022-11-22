@@ -82,6 +82,7 @@ void reserveUi() {
 		i++;
 		tmp[i] = strtok(NULL, " ");
 	}
+	// if(i>=8 && i%8 == 0 )
 	square(85, 29, 12, 1);
 	square_char(70, 2, 19, 2, "¡Ø¿¹¾à¡Ø");
 	square(35, 2, 29, 7);
