@@ -147,5 +147,5 @@ void changeUi()
 	countTime(1);
 
 	goto_xy(0, 30);
-	ExClick();
+	//ExClick();
 }

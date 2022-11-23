@@ -15,7 +15,7 @@ void modifyUi()
 		printf("式式式式式式式式式式式式式式式式");
 
 		goto_xy(48, 10);
-		printf("%s", "010-8984-5491");
+		printf("%s", &member[count - 2].number);
 		goto_xy(47, 11);
 		printf("式式式式式式式式式式式式式式");
 

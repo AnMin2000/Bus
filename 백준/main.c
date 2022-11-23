@@ -2,38 +2,22 @@
 #include"header.h"
 int main()
 {
-
-	//Mouse();
-
-	//Ticket_read();
-	
-	//Member_read();
-
-	char doc[100000];
-	strcpy(doc, Bus_read("Bus.txt"));
-	char* token = NULL;
-	char tmp2[] = " ,\t\n";
-	char tmp[1000];
-
-	strcpy(tmp, strtok(doc, tmp2));
-
-	token = strtok(tmp, tmp2);
-
-	//printf("%s ", tmp[0]);
-	while (token != NULL)
-	{
-		printf("token = %s", token);
-		putchar('\n');
-		token = strtok(NULL, tmp2);
-	}
-	//printf("%s ", tmp[0]);
-	//printf("%s ", tmp[1]);
-
-	
+	Mouse();
+	Member_read();
+	Ticket_read();
 	//LoginUi();
+    int counter = 0; // Used for counting
+    const char s[2] = "\n"; // Used for tokenization
 
-	//modifyUi();
-	//changeUi();
-	//inquiryUi();
-	//ExClick();
+    // ............
+    char* doc = Bus_read("Bus.txt");
+    char* tmp[1000] = { 0 };
+    char* token;
+    token = strtok(doc, s);
+    while (token != NULL) {
+        fprintf(doc, "%d ", counter);
+        fprintf(doc, "%s\n", token); // Add the new line character here since it is removed from the tokenization process
+        counter++;
+        token = strtok(NULL, s);
+    }
 }
