@@ -1,7 +1,7 @@
 #pragma once
 #pragma warning(disable : 4996)
 #pragma warning(disable : 6031)
-#define MAX 1000
+#define MAX 10000
 #define TOKEN_COUNT 1000    // 토큰의 최대 개수
 #include<stdio.h>
 #include<Windows.h>
@@ -92,6 +92,11 @@ typedef struct{    // 연결 리스트의 노드 구조체
     Element data;
 }Node;
 
+typedef struct {
+    char bus[15];
+}Bus;
+Bus bus[MAX];
+
 Book member[MAX];
 Ticket ticket[MAX];
 
@@ -181,4 +186,5 @@ int ticket_id_count; // 티켓 몇번째 id인지 관리 변수
 int blank_count; // 시작 달력 공백이 몇인지 계산해서 회색으로 바꿔주기 위한 코드
 int ticket_count; // 티켓 파일에 쓸 카운트 변수
 int cancle_count; // 티켓 삭제후 -1을 위한 변수
+int sales_count;
 // 첫번째 연결리스트 입력 받기 위한 변수
