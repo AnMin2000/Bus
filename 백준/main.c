@@ -3,5 +3,5 @@
 int main()
 {	
 	Member_read();
-	MainUi();
+	MainUi();;
 }
